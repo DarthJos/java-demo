@@ -1,9 +1,9 @@
-package org.jrprojects.calculadora;
+package org.jrprojects.javacore;
 
 import java.util.Scanner;
 
 /**
- * Método principal para invocar la calculadora
+ * Método principal para invocar la javacore
  */
 public class Calculadora {
 
@@ -11,17 +11,17 @@ public class Calculadora {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Ingresa el 1er número: ");
-        String str_num1 = scanner.nextLine();
+        String strNum1 = scanner.nextLine();
 
         System.out.println("Ingresa el tipo de operación (+, -, *, /): ");
         String operacion = scanner.nextLine();
 
         System.out.println("Ingresa el 2o número: ");
-        String str_num2 = scanner.nextLine();
+        String strNum2 = scanner.nextLine();
 
         //Conversión de números a dobles
-        double num1 = Double.parseDouble(str_num1);
-        double num2 = Integer.parseInt(str_num2);
+        double num1 = Double.parseDouble(strNum1);
+        double num2 = Integer.parseInt(strNum2);
         double resultado = 0;
 
         if (operacion.equals("+")) { resultado = suma(num1, num2 );}
@@ -32,7 +32,7 @@ public class Calculadora {
             System.out.println("Operación no reconocida...");
         }
 
-        System.out.println(str_num1 + " " + operacion + " " + str_num2 + " = " + resultado);
+        System.out.println(strNum1 + " " + operacion + " " + strNum2 + " = " + resultado);
     }
 
     private static double suma(double num1, double num2) {
