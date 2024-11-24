@@ -1,6 +1,7 @@
 package org.jrprojects;
 
 import static org.jrprojects.javacore.Calculadora.calculadora;
+import static org.jrprojects.javacore.Multiplicador.imprimeTabla;
 
 public class Main {
 
@@ -8,5 +9,6 @@ public class Main {
         System.out.println("Hello world!");
 
         calculadora();
+        imprimeTabla();
     }
 }
