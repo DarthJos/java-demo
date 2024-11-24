@@ -24,7 +24,15 @@ public class Calculadora {
         double num2 = Integer.parseInt(str_num2);
         double resultado = 0;
 
-        System.out.println(str_num1 + " " + operacion + " " + str_num2);
+        if (operacion.equals("+")) { resultado = suma(num1, num2 );}
+        else if (operacion.equals("-")) { resultado = resta(num1, num2 );}
+        else if (operacion.equals("*")) { resultado = multiplicacion(num1, num2 );}
+        else if (operacion.equals("/")) { resultado = division(num1, num2 );}
+        else {
+            System.out.println("Operación no reconocida...");
+        }
+
+        System.out.println(str_num1 + " " + operacion + " " + str_num2 + " = " + resultado);
     }
 
     private static double suma(double num1, double num2) {
@@ -40,6 +48,9 @@ public class Calculadora {
     }
 
     private static double division(double num1, double num2) {
+        if (num2 == 0) {
+            return 0;
+        }
         return  num1 / num2;
     }
 }
