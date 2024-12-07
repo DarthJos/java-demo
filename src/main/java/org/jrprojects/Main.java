@@ -1,5 +1,6 @@
 package org.jrprojects;
 
+import org.jrprojects.javacore.CuentaBancaria;
 import org.jrprojects.javacore.Estudiante;
 import org.jrprojects.javacore.VerificadorPalabras;
 
@@ -21,12 +22,17 @@ public class Main {
         System.out.println("Frase en mayusculas: " + verificador.setToMayus(frase));
         System.out.println("La palabra '"+palabra+"' se encuentra en la frase? " + verificador.contienePalabra(frase, palabra));*/
 
-        Estudiante josi = new Estudiante("Josi", 34, 100);
+        /*Estudiante josi = new Estudiante("Josi", 34, 100);
         Estudiante yvi = new Estudiante("Yvi", 24, 99);
         Estudiante carito = new Estudiante("Luna Carolina", 1, 99.9);
 
         System.out.println(josi.isApproved());
         System.out.println(yvi.getEdad());
-        System.out.println(carito.getNombre());
+        System.out.println(carito.getNombre());*/
+
+        CuentaBancaria miCuenta = new CuentaBancaria(4152313184328164L, 200000.00);
+        miCuenta.depositar(150000);
+        miCuenta.retirar(40000);
+        System.out.println(miCuenta.mostrarSaldo());
     }
 }
