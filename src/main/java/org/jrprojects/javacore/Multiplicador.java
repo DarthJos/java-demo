@@ -11,9 +11,17 @@ public class Multiplicador {
         System.out.println("Ingresa un número para imprimir su tabla de multiplicar: ");
         int num = scanner.nextInt();
 
-        while (cont < 10) {
-            cont++;
-            System.out.println(num + " x " + cont + " = " + num*cont);
+        System.out.println(getTabla(num));
+    }
+
+    private static String getTabla(int num){
+        String tabla ="Tabla del " + num + "\n";
+
+        for (int i = 0; i <=10 ; i++) {
+            int multiplicacion = i * num;
+            tabla += num + " x " + i + " = " + multiplicacion + "\n";
         }
+
+        return tabla;
     }
 }
