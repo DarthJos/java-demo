@@ -2,12 +2,13 @@ package org.jrprojects;
 
 import org.jrprojects.javacore.CuentaBancaria;
 import org.jrprojects.javacore.Estudiante;
+import org.jrprojects.javacore.Libro;
 import org.jrprojects.javacore.VerificadorPalabras;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        //System.out.println("Hello world!");
 
         //calculadora();
         //imprimeTabla();
@@ -30,9 +31,22 @@ public class Main {
         System.out.println(yvi.getEdad());
         System.out.println(carito.getNombre());*/
 
-        CuentaBancaria miCuenta = new CuentaBancaria(4152313184328164L, 200000.00);
+        /*CuentaBancaria miCuenta = new CuentaBancaria(4152313184328164L, 200000.00);
         miCuenta.depositar(150000);
         miCuenta.retirar(40000);
-        System.out.println(miCuenta.mostrarSaldo());
+        System.out.println(miCuenta.mostrarSaldo());*/
+
+        Libro[] libros = {
+            new Libro("Un mundo feliz", "Aldous Houxley", 1900),
+            new Libro("La tumba del templo de la Luna", "Ni Me Acuerdo", 1900),
+            new Libro("Mi Mami", "Carolina Morales", 1930),
+            new Libro("Cómo hacer una película Porno", "El Josi", 2014),
+            new Libro("Es Neta?", "Jordy Rosado", 2019)
+        };
+
+        for (int i = 0; i < libros.length; i++) {
+            System.out.println(libros[i].toString());
+            System.out.println(libros[i].tieneMasDiezAnios());
+        }
     }
 }
