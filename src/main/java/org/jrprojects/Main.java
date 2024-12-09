@@ -4,6 +4,9 @@ import org.jrprojects.javacore.CuentaBancaria;
 import org.jrprojects.javacore.Estudiante;
 import org.jrprojects.javacore.Libro;
 import org.jrprojects.javacore.VerificadorPalabras;
+import org.jrprojects.poo.animales.Animal;
+import org.jrprojects.poo.animales.Gato;
+import org.jrprojects.poo.animales.Perro;
 import org.jrprojects.poo.sistematransporte.Automovil;
 import org.jrprojects.poo.sistematransporte.Bicicleta;
 
@@ -51,9 +54,18 @@ public class Main {
             System.out.println(libros[i].tieneMasDiezAnios());
         }*/
 
-        Automovil automovil = new Automovil();
+        /*Automovil automovil = new Automovil();
         Bicicleta bicicleta = new Bicicleta();
         automovil.mover();
-        bicicleta.mover();
+        bicicleta.mover();*/
+
+        Animal[] animales = {
+          new Perro(),
+          new Gato()
+        };
+
+        for (int i = 0; i < animales.length; i++) {
+            animales[i].hacerSonido();
+        }
     }
 }
