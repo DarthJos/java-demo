@@ -4,6 +4,8 @@ import org.jrprojects.javacore.CuentaBancaria;
 import org.jrprojects.javacore.Estudiante;
 import org.jrprojects.javacore.Libro;
 import org.jrprojects.javacore.VerificadorPalabras;
+import org.jrprojects.poo.sistematransporte.Automovil;
+import org.jrprojects.poo.sistematransporte.Bicicleta;
 
 public class Main {
 
@@ -36,7 +38,7 @@ public class Main {
         miCuenta.retirar(40000);
         System.out.println(miCuenta.mostrarSaldo());*/
 
-        Libro[] libros = {
+        /*Libro[] libros = {
             new Libro("Un mundo feliz", "Aldous Houxley", 1900),
             new Libro("La tumba del templo de la Luna", "Ni Me Acuerdo", 1900),
             new Libro("Mi Mami", "Carolina Morales", 1930),
@@ -47,6 +49,11 @@ public class Main {
         for (int i = 0; i < libros.length; i++) {
             System.out.println(libros[i].toString());
             System.out.println(libros[i].tieneMasDiezAnios());
-        }
+        }*/
+
+        Automovil automovil = new Automovil();
+        Bicicleta bicicleta = new Bicicleta();
+        automovil.mover();
+        bicicleta.mover();
     }
 }
