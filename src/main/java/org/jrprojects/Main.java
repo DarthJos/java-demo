@@ -36,10 +36,10 @@ public class Main {
         System.out.println(yvi.getEdad());
         System.out.println(carito.getNombre());*/
 
-        /*CuentaBancaria miCuenta = new CuentaBancaria(4152313184328164L, 200000.00);
+        CuentaBancaria miCuenta = new CuentaBancaria(4152313184328164L, 200000.00);
         miCuenta.depositar(150000);
-        miCuenta.retirar(40000);
-        System.out.println(miCuenta.mostrarSaldo());*/
+        miCuenta.retirar(350000);
+        System.out.println(miCuenta.mostrarSaldo());
 
         /*Libro[] libros = {
             new Libro("Un mundo feliz", "Aldous Houxley", 1900),
@@ -59,13 +59,13 @@ public class Main {
         automovil.mover();
         bicicleta.mover();*/
 
-        Animal[] animales = {
+        /*Animal[] animales = {
           new Perro(),
           new Gato()
         };
 
         for (int i = 0; i < animales.length; i++) {
             animales[i].hacerSonido();
-        }
+        }*/
     }
 }

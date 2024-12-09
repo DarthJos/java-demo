@@ -30,6 +30,9 @@ package org.jrprojects.javacore;public class CuentaBancaria {
     }
 
     public void retirar(double monto) {
-        saldo -= monto;
+        if (saldo >= monto)
+            saldo -= monto;
+        else
+            System.out.println("Saldo insuficiente...");
     }
 }
