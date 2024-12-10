@@ -10,6 +10,7 @@ import org.jrprojects.poo.animales.Perro;
 import org.jrprojects.poo.figuras.Circulo;
 import org.jrprojects.poo.figuras.Figura;
 import org.jrprojects.poo.figuras.Rectangulo;
+import org.jrprojects.poo.habilidades.Pato;
 import org.jrprojects.poo.sistematransporte.Automovil;
 import org.jrprojects.poo.sistematransporte.Bicicleta;
 
@@ -74,7 +75,7 @@ public class Main {
             animales[i].hacerSonido();
         }*/
 
-        List<Figura> listaFiguras = new ArrayList<>();
+        /*List<Figura> listaFiguras = new ArrayList<>();
         listaFiguras.add(new Circulo(10));
         listaFiguras.add(new Rectangulo(2, 4));
         listaFiguras.add(new Circulo(1.0));
@@ -82,6 +83,10 @@ public class Main {
 
         for (int i = 0; i < listaFiguras.size(); i++) {
             System.out.println("El área es: "+ listaFiguras.get(i).calcularArea());
-        }
+        }*/
+
+        Pato pato = new Pato();
+        pato.nadar();
+        pato.volar();
     }
 }
