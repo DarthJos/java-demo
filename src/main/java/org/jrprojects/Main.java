@@ -10,6 +10,9 @@ import org.jrprojects.poo.animales.Perro;
 import org.jrprojects.poo.figuras.Circulo;
 import org.jrprojects.poo.figuras.Figura;
 import org.jrprojects.poo.figuras.Rectangulo;
+import org.jrprojects.poo.gestionempleados.Empleado;
+import org.jrprojects.poo.gestionempleados.EmpleadoMedioTiempo;
+import org.jrprojects.poo.gestionempleados.EmpleadoTiempoCompleto;
 import org.jrprojects.poo.habilidades.Pato;
 import org.jrprojects.poo.sistematransporte.Automovil;
 import org.jrprojects.poo.sistematransporte.Bicicleta;
@@ -85,8 +88,19 @@ public class Main {
             System.out.println("El área es: "+ listaFiguras.get(i).calcularArea());
         }*/
 
-        Pato pato = new Pato();
+        /*Pato pato = new Pato();
         pato.nadar();
-        pato.volar();
+        pato.volar();*/
+
+        Empleado[] empleados = {
+                new EmpleadoTiempoCompleto("Josimar", 43000.0),
+                new EmpleadoMedioTiempo("Yvette", 20000.0)
+        };
+
+        for (Empleado empleado: empleados) {
+            System.out.println("Nombre: " + empleado.getNombre() + "\n" +
+                    "Salario: " + empleado.getSalario() + "\n" +
+                    "Bonificación: " + empleado.calcularBonificacion() + "\n" );
+        }
     }
 }
