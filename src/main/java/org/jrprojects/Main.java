@@ -1,7 +1,6 @@
 package org.jrprojects;
 
 import org.jrprojects.javacore.CuentaBancaria;
-import org.jrprojects.javacore.Estudiante;
 import org.jrprojects.javacore.Libro;
 import org.jrprojects.javacore.VerificadorPalabras;
 import org.jrprojects.poo.animales.Animal;
@@ -14,6 +13,9 @@ import org.jrprojects.poo.gestionempleados.Empleado;
 import org.jrprojects.poo.gestionempleados.EmpleadoMedioTiempo;
 import org.jrprojects.poo.gestionempleados.EmpleadoTiempoCompleto;
 import org.jrprojects.poo.habilidades.Pato;
+import org.jrprojects.poo.sistemaescolar.Estudiante;
+import org.jrprojects.poo.sistemaescolar.Persona;
+import org.jrprojects.poo.sistemaescolar.Profesor;
 import org.jrprojects.poo.sistematransporte.Automovil;
 import org.jrprojects.poo.sistematransporte.Bicicleta;
 
@@ -92,7 +94,7 @@ public class Main {
         pato.nadar();
         pato.volar();*/
 
-        Empleado[] empleados = {
+        /*Empleado[] empleados = {
                 new EmpleadoTiempoCompleto("Josimar", 43000.0),
                 new EmpleadoMedioTiempo("Yvette", 20000.0)
         };
@@ -101,6 +103,16 @@ public class Main {
             System.out.println("Nombre: " + empleado.getNombre() + "\n" +
                     "Salario: " + empleado.getSalario() + "\n" +
                     "Bonificación: " + empleado.calcularBonificacion() + "\n" );
+        }*/
+
+        List<Persona> personas = new ArrayList<>();
+        personas.add(new Estudiante("Renata Limón", 17, 100));
+        personas.add(new Estudiante("Romina Reyes", 17, 98));
+        personas.add(new Estudiante("Valeria Córdova", 16, 99));
+        personas.add(new Profesor("Josimar Reyes", 34, "Tecnología"));
+
+        for (Persona persona : personas) {
+            System.out.println(persona.mostrarDetalles());
         }
     }
 }
