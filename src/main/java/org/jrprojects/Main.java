@@ -1,23 +1,8 @@
 package org.jrprojects;
 
-import org.jrprojects.javacore.CuentaBancaria;
-import org.jrprojects.javacore.Libro;
-import org.jrprojects.javacore.VerificadorPalabras;
-import org.jrprojects.poo.animales.Animal;
-import org.jrprojects.poo.animales.Gato;
-import org.jrprojects.poo.animales.Perro;
-import org.jrprojects.poo.figuras.Circulo;
-import org.jrprojects.poo.figuras.Figura;
-import org.jrprojects.poo.figuras.Rectangulo;
-import org.jrprojects.poo.gestionempleados.Empleado;
-import org.jrprojects.poo.gestionempleados.EmpleadoMedioTiempo;
-import org.jrprojects.poo.gestionempleados.EmpleadoTiempoCompleto;
-import org.jrprojects.poo.habilidades.Pato;
 import org.jrprojects.poo.sistemaescolar.Estudiante;
 import org.jrprojects.poo.sistemaescolar.Persona;
 import org.jrprojects.poo.sistemaescolar.Profesor;
-import org.jrprojects.poo.sistematransporte.Automovil;
-import org.jrprojects.poo.sistematransporte.Bicicleta;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +11,12 @@ public class Main {
 
     public static void main(String[] args) {
         //System.out.println("Hello world!");
+
+        ejecutaEjerciciosBasicos();
+        ejecutaEjerciciosPOO();
+    }
+
+    public static void ejecutaEjerciciosBasicos() {
 
         //calculadora();
         //imprimeTabla();
@@ -65,6 +56,10 @@ public class Main {
             System.out.println(libros[i].toString());
             System.out.println(libros[i].tieneMasDiezAnios());
         }*/
+    }
+
+    public static void ejecutaEjerciciosPOO() {
+
 
         /*Automovil automovil = new Automovil();
         Bicicleta bicicleta = new Bicicleta();
@@ -105,7 +100,7 @@ public class Main {
                     "Bonificación: " + empleado.calcularBonificacion() + "\n" );
         }*/
 
-        List<Persona> personas = new ArrayList<>();
+        /*List<Persona> personas = new ArrayList<>();
         personas.add(new Estudiante("Renata Limón", 17, 100));
         personas.add(new Estudiante("Romina Reyes", 17, 98));
         personas.add(new Estudiante("Valeria Córdova", 16, 99));
@@ -113,6 +108,6 @@ public class Main {
 
         for (Persona persona : personas) {
             System.out.println(persona.mostrarDetalles());
-        }
+        }*/
     }
 }

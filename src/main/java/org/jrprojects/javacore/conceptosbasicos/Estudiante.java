@@ -1,4 +1,4 @@
-package org.jrprojects.javacore;
+package org.jrprojects.javacore.conceptosbasicos;
 
 /**
  * clase Estudiante que contenga:

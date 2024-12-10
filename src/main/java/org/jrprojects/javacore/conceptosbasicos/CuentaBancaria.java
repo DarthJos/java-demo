@@ -1,4 +1,4 @@
-package org.jrprojects.javacore;public class CuentaBancaria {
+package org.jrprojects.javacore.conceptosbasicos;public class CuentaBancaria {
 
     private Long numeroCuenta;
     private double saldo;

@@ -1,4 +1,4 @@
-package org.jrprojects.javacore;
+package org.jrprojects.javacore.conceptosbasicos;
 
 public class VerificadorPalabras {
 
