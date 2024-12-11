@@ -2,6 +2,7 @@ package org.jrprojects;
 
 import org.jrprojects.javacore.excepciones.EdadInvalidaException;
 import org.jrprojects.javacore.excepciones.EjerciciosExcepciones;
+import org.jrprojects.javacore.hilos.EjerciciosHilos;
 
 public class Main {
 
@@ -12,6 +13,7 @@ public class Main {
         ejecutaEjerciciosPOO();
         ejecutaEjerciciosColecciones();
         ejecutaEjerciciosExcepciones();
+        ejecutaEjerciciosHilos();
     }
 
     public static void ejecutaEjerciciosBasicos() {
@@ -144,10 +146,21 @@ public class Main {
         }*/
         //excepciones.convierteACadenaYDivide("10", "0");
         //excepciones.ejercicio5();
-        try{
+        /*try{
             excepciones.retirarDinero(600.0);
         } catch (EdadInvalidaException e) {
             System.out.println("Error: " + e.getMessage());
+        }*/
+    }
+
+    public static void ejecutaEjerciciosHilos() {
+        EjerciciosHilos ejerciciosHilos = new EjerciciosHilos();
+        try {
+            ejerciciosHilos.ejercicio1();
+        } catch (InterruptedException e) {
+            System.out.println("InterruptedException D:");
         }
+
+        ejerciciosHilos.ejercicio2();
     }
 }
