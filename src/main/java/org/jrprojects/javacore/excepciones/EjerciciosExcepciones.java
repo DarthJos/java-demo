@@ -154,7 +154,15 @@ public class EjerciciosExcepciones {
      * Lance la excepción personalizada si el saldo no es suficiente.
      * Usa un bloque try-catch para manejar la excepción y mostrar un mensaje apropiado al usuario.
      */
-    public void retirarDinero() {
-
+    double saldo = 500.0;
+    public void retirarDinero(double monto) throws EdadInvalidaException {
+        //verifica si hay saldo suficiente
+        if (monto > saldo) {
+            throw new EdadInvalidaException("Fondos insuficientes. Saldo disponible: "+saldo);
+        }
+        else {
+            saldo -= monto;
+            System.out.println("Retiro exitoso. Saldo restante: "+saldo);
+        }
     }
 }

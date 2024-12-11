@@ -1,5 +1,6 @@
 package org.jrprojects;
 
+import org.jrprojects.javacore.excepciones.EdadInvalidaException;
 import org.jrprojects.javacore.excepciones.EjerciciosExcepciones;
 
 public class Main {
@@ -143,6 +144,10 @@ public class Main {
         }*/
         //excepciones.convierteACadenaYDivide("10", "0");
         //excepciones.ejercicio5();
-        excepciones.retirarDinero();
+        try{
+            excepciones.retirarDinero(600.0);
+        } catch (EdadInvalidaException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
     }
 }
