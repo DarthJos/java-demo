@@ -68,4 +68,21 @@ public class EjerciciosExcepciones {
         }
         System.out.println("Número de líneas: " + contador);
     }
+
+    /**
+     *
+     *Ejercicio 3: Excepciones Personalizadas.
+     * Crea una clase de excepción personalizada llamada EdadInvalidaException.
+     * Luego, escribe un programa que valide la edad de una persona antes de permitirle registrarse en un sistema.
+     * @param edad recibe un número entero que representa la edad
+     */
+    public void validaEdad(int edad) throws EdadInvalidaException {
+        System.out.println("*** Ejercicio 3 ***");
+        if (edad<18 || edad>99) {
+            throw new EdadInvalidaException("La edad ingresada no es válida");
+        }
+        else {
+            System.out.println("Registro completado con éxito.");
+        }
+    }
 }

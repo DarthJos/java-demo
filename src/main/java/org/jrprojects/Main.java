@@ -1,5 +1,6 @@
 package org.jrprojects;
 
+import org.jrprojects.javacore.excepciones.EdadInvalidaException;
 import org.jrprojects.javacore.excepciones.EjerciciosExcepciones;
 
 public class Main {
@@ -135,6 +136,11 @@ public class Main {
     public static void ejecutaEjerciciosExcepciones() {
         EjerciciosExcepciones excepciones = new EjerciciosExcepciones();
         //excepciones.ejercicio1();
-        excepciones.contarLineas("src/main/java/org/jrprojects/javacore/excepciones/datos.txt");
+        //excepciones.contarLineas("src/main/java/org/jrprojects/javacore/excepciones/datos.txt");
+        try{
+           excepciones.validaEdad(25);
+        } catch (EdadInvalidaException e) {
+            System.out.println("Error: " + e);
+        }
     }
 }
