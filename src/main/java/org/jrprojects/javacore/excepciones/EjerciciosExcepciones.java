@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.SQLOutput;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -110,6 +111,34 @@ public class EjerciciosExcepciones {
             System.out.println("Error: División por cero.");
         }finally {
             System.out.println("Programa terminado.");
+        }
+    }
+
+    /**
+     * Ejercicio 5: Múltiples excepciones con try-catch
+     * Escribe un programa que intente acceder a un índice de un arreglo ingresado por el usuario.
+     *
+     * Requisitos:
+     *
+     * Usa un arreglo fijo de tamaño 5 con valores predefinidos.
+     * Captura las siguientes excepciones:
+     * ArrayIndexOutOfBoundsException si el índice está fuera de los límites.
+     * InputMismatchException si el usuario ingresa un valor no numérico.
+     */
+    public void ejercicio5() {
+        System.out.println("*** Ejercicio 5 ***");
+        Scanner input = new Scanner(System.in);
+        //Declara arreglo con 5 valores predefinidos
+        int[] enteros = {1, 2, 3, 4, 5};
+        System.out.println("Ingresa un número para buscar índice y asignar valor: ");
+        try {
+            int index = input.nextInt();
+            System.out.println(enteros[index]);
+            enteros[3] = index;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error: Índice fuera de rango.\n");
+        } catch (InputMismatchException e) {
+            System.out.println("Error: entrada inválida, por favor ingrese un número.");
         }
     }
 }

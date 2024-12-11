@@ -141,6 +141,7 @@ public class Main {
         } catch (EdadInvalidaException e) {
             System.out.println("Error: " + e);
         }*/
-        excepciones.convierteACadenaYDivide("10", "0");
+        //excepciones.convierteACadenaYDivide("10", "0");
+        excepciones.ejercicio5();
     }
 }
