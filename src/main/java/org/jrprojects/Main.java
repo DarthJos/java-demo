@@ -125,5 +125,6 @@ public class Main {
 
         Iteradores iteradores = new Iteradores();
         iteradores.ejercicio7();
+        iteradores.ejercicio8();
     }
 }
