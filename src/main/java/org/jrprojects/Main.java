@@ -119,6 +119,7 @@ public class Main {
         ejerciciosSets.ejercicio4();*/
 
         Maps maps = new Maps();
-        maps.ejercicio5();
+        //maps.ejercicio5();
+        maps.ejercicio6();
     }
 }

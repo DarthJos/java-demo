@@ -1,7 +1,6 @@
 package org.jrprojects.javacore.colecciones;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Maps {
     /**
@@ -44,5 +43,34 @@ public class Maps {
         }
 
         System.out.println(contactos);
+    }
+
+    /**
+     * Ejercicio 6: Contar frecuencias
+     * Dada una lista de palabras, usa un HashMap para contar cuántas veces aparece cada palabra.
+     * Imprime las palabras junto con sus frecuencias.
+     */
+    public void ejercicio6() {
+        String cadena = "Hola Mundo Java. Este es un ejemplo de cadena en Java.";
+        String[] arrayPalabras = cadena.split(" ");     //Parte toda la cadena por palabras y las almacena en un array
+        List<String> listaPalabras = new ArrayList<>(Arrays.asList(arrayPalabras)); //Almacena el arreglo de palabras como una lista
+        HashSet<String> palabrasSinRepetir = new HashSet<>(Arrays.asList(arrayPalabras));     //Guarda cada palabra sin repetir en un set
+        HashMap<String, Integer> incidenciasPalabras = new HashMap<String, Integer>();
+
+        // Revisa cada palabra sin repetir del texo y busca cuantas veces aparece en la lista completa de palabras
+        for (String palabraSinRepetir : palabrasSinRepetir) {
+            int frecuencia = 0;
+            for (String palabra : listaPalabras) {
+                if (palabraSinRepetir.equals(palabra)) frecuencia++;
+            }
+            incidenciasPalabras.put(palabraSinRepetir, frecuencia);
+        }
+
+        //Imprime cada palabra con su respectiva frecuencia
+        System.out.println("-- Frecuencia por palabra --");
+        for (Map.Entry<String,Integer> palabraContada : incidenciasPalabras.entrySet()) {
+            System.out.println(palabraContada.getKey() + "--> " + palabraContada.getValue());
+        }
+
     }
 }
