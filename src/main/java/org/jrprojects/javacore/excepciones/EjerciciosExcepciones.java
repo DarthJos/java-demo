@@ -1,5 +1,9 @@
 package org.jrprojects.javacore.excepciones;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -36,5 +40,32 @@ public class EjerciciosExcepciones {
         } finally {
             System.out.println("Gracias por usar el programa.");
         }
+    }
+
+    /**
+     * Ejercicio 2: Manejo de throws
+     * Escribe un programa que lea un archivo de texto llamado datos.txt y cuente el número de líneas en él.
+     *
+     * Requisitos:
+     *
+     * Crea un método llamado contarLineas que use la palabra clave throws para declarar que puede lanzar una IOException.
+     * Maneja la excepción en el método principal.
+     */
+    public void contarLineas(String ruta) {
+        System.out.println("*** EJERCICIO 2 ***");
+        int contador = 0;
+
+        try(BufferedReader br = new BufferedReader(new FileReader(ruta))){
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                System.out.println(linea);
+                contador++;
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("Error: El archivo datos.txt no se encontró.\n");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("Número de líneas: " + contador);
     }
 }
