@@ -1,9 +1,6 @@
 package org.jrprojects;
 
-import org.jrprojects.javacore.colecciones.Iteradores;
-import org.jrprojects.javacore.colecciones.Listas;
-import org.jrprojects.javacore.colecciones.Maps;
-import org.jrprojects.javacore.colecciones.Sets;
+import org.jrprojects.javacore.colecciones.*;
 
 public class Main {
 
@@ -123,8 +120,14 @@ public class Main {
         maps.ejercicio5();
         maps.ejercicio6();*/
 
-        Iteradores iteradores = new Iteradores();
+        /*Iteradores iteradores = new Iteradores();
         iteradores.ejercicio7();
-        iteradores.ejercicio8();
+        iteradores.ejercicio8();*/
+
+        Streams streams = new Streams();
+        //streams.ejercicio9();
+        //streams.ejercicio10();
+        //streams.ejercicio11();
+        streams.ejercicio12();
     }
 }
