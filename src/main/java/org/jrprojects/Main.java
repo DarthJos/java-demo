@@ -142,6 +142,7 @@ public class Main {
             System.out.println("Error: " + e);
         }*/
         //excepciones.convierteACadenaYDivide("10", "0");
-        excepciones.ejercicio5();
+        //excepciones.ejercicio5();
+        excepciones.retirarDinero();
     }
 }

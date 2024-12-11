@@ -141,4 +141,20 @@ public class EjerciciosExcepciones {
             System.out.println("Error: entrada inválida, por favor ingrese un número.");
         }
     }
+
+    /**
+     * Ejercicio 6: Uso combinado de conceptos
+     * Crea un programa que simule un sistema de retiro de cajero automático.
+     *
+     * Requisitos:
+     *
+     * Crea una excepción personalizada llamada SaldoInsuficienteException.
+     * Escribe un método llamado retirarDinero que:
+     * Verifique si el saldo es suficiente antes de permitir el retiro.
+     * Lance la excepción personalizada si el saldo no es suficiente.
+     * Usa un bloque try-catch para manejar la excepción y mostrar un mensaje apropiado al usuario.
+     */
+    public void retirarDinero() {
+
+    }
 }
