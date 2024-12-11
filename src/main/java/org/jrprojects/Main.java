@@ -1,6 +1,7 @@
 package org.jrprojects;
 
 import org.jrprojects.javacore.colecciones.*;
+import org.jrprojects.javacore.excepciones.EjerciciosExcepciones;
 
 public class Main {
 
@@ -10,6 +11,7 @@ public class Main {
         ejecutaEjerciciosBasicos();
         ejecutaEjerciciosPOO();
         ejecutaEjerciciosColecciones();
+        ejecutaEjerciciosExcepciones();
     }
 
     public static void ejecutaEjerciciosBasicos() {
@@ -124,10 +126,15 @@ public class Main {
         iteradores.ejercicio7();
         iteradores.ejercicio8();*/
 
-        Streams streams = new Streams();
-        //streams.ejercicio9();
-        //streams.ejercicio10();
-        //streams.ejercicio11();
-        streams.ejercicio12();
+        /*Streams streams = new Streams();
+        streams.ejercicio9();
+        streams.ejercicio10();
+        streams.ejercicio11();
+        streams.ejercicio12();*/
+    }
+
+    public static void ejecutaEjerciciosExcepciones() {
+        EjerciciosExcepciones excepciones = new EjerciciosExcepciones();
+        excepciones.ejercicio1();
     }
 }
