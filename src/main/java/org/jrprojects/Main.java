@@ -1,11 +1,7 @@
 package org.jrprojects;
 
-import org.jrprojects.javacore.poo.sistemaescolar.Estudiante;
-import org.jrprojects.javacore.poo.sistemaescolar.Persona;
-import org.jrprojects.javacore.poo.sistemaescolar.Profesor;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.jrprojects.javacore.colecciones.Listas;
+import org.jrprojects.javacore.colecciones.Sets;
 
 public class Main {
 
@@ -14,6 +10,7 @@ public class Main {
 
         ejecutaEjerciciosBasicos();
         ejecutaEjerciciosPOO();
+        ejecutaEjerciciosColecciones();
     }
 
     public static void ejecutaEjerciciosBasicos() {
@@ -109,5 +106,15 @@ public class Main {
         for (Persona persona : personas) {
             System.out.println(persona.mostrarDetalles());
         }*/
+    }
+
+    public static void ejecutaEjerciciosColecciones() {
+        /*Listas ejerciciosListas = new Listas();
+        ejerciciosListas.ejercicio1();
+        ejerciciosListas.ejercicio2();*/
+
+        /*Sets ejerciciosSets = new Sets();
+        ejerciciosSets.ejercicio3();
+        ejerciciosSets.ejercicio4();*/
     }
 }
