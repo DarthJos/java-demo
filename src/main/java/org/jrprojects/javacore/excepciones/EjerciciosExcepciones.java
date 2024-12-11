@@ -85,4 +85,31 @@ public class EjerciciosExcepciones {
             System.out.println("Registro completado con éxito.");
         }
     }
+
+    /**
+     * Ejercicio 4: Jerarquía de Excepciones
+     * Escribe un programa que intente convertir una cadena de caracteres a un número entero y realice una operación con él.
+     *
+     * Requisitos:
+     *
+     * Maneja las siguientes excepciones usando bloques catch separados:
+     * NumberFormatException si la conversión falla.
+     * ArithmeticException si ocurre una operación inválida (como dividir por cero).
+     * Usa un bloque finally para imprimir "Programa terminado".
+     */
+    public void convierteACadenaYDivide(String cad1, String cad2) {
+        System.out.println("*** Ejercicio 4 ***");
+        try {
+            int num1 = Integer.parseInt(cad1);
+            int num2 = Integer.parseInt(cad2);
+
+            System.out.println("Division de "+num1+"/"+num2 + "= " + num1/num2);
+        } catch (NumberFormatException e) {
+            System.out.println("Error: La entrada no es un número válido.");
+        } catch (ArithmeticException e) {
+            System.out.println("Error: División por cero.");
+        }finally {
+            System.out.println("Programa terminado.");
+        }
+    }
 }
