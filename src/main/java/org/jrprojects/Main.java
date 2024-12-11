@@ -1,8 +1,8 @@
 package org.jrprojects;
 
-import org.jrprojects.poo.sistemaescolar.Estudiante;
-import org.jrprojects.poo.sistemaescolar.Persona;
-import org.jrprojects.poo.sistemaescolar.Profesor;
+import org.jrprojects.javacore.poo.sistemaescolar.Estudiante;
+import org.jrprojects.javacore.poo.sistemaescolar.Persona;
+import org.jrprojects.javacore.poo.sistemaescolar.Profesor;
 
 import java.util.ArrayList;
 import java.util.List;

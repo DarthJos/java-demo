@@ -1,4 +1,4 @@
-package org.jrprojects.poo.sistemaescolar;
+package org.jrprojects.javacore.poo.sistemaescolar;
 
 public class Profesor extends Persona{
 

@@ -1,4 +1,4 @@
-package org.jrprojects.poo.habilidades;
+package org.jrprojects.javacore.poo.habilidades;
 
 public class Pato implements Volador, Nadador{
 

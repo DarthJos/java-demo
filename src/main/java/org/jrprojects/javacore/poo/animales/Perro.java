@@ -1,4 +1,4 @@
-package org.jrprojects.poo.animales;
+package org.jrprojects.javacore.poo.animales;
 
 public class Perro extends Animal {
     @Override

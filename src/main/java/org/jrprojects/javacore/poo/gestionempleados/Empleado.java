@@ -1,4 +1,4 @@
-package org.jrprojects.poo.gestionempleados;
+package org.jrprojects.javacore.poo.gestionempleados;
 
 public abstract class Empleado {
     private String nombre;

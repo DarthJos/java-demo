@@ -1,4 +1,4 @@
-package org.jrprojects.poo.sistematransporte;
+package org.jrprojects.javacore.poo.sistematransporte;
 
 public class Vehiculo {
     private String marca;

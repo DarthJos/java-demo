@@ -1,4 +1,4 @@
-package org.jrprojects.poo.figuras;
+package org.jrprojects.javacore.poo.figuras;
 
 public class Rectangulo extends Figura{
 
