@@ -165,4 +165,19 @@ public class EjerciciosExcepciones {
             System.out.println("Retiro exitoso. Saldo restante: "+saldo);
         }
     }
+
+    /**
+     * Ejercicio 8: Generación y propagación de excepciones
+     * Crea un programa que contenga un método llamado calcularRaizCuadrada, que:
+     *
+     * Reciba un número como parámetro.
+     * Lance una excepción personalizada llamada NumeroNegativoException si el número es negativo.
+     * Propague la excepción hasta el método principal y maneja la excepción ahí.
+     */
+    public double calcularRaizCuadrada(int numero) throws NumeroNegativoException {
+        double raiz;
+
+        if (numero <0) throw new NumeroNegativoException("No se puede calcular la raíz cuadrada de un número negativo.");
+        return Math.sqrt(numero);
+    }
 }

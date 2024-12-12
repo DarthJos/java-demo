@@ -2,6 +2,7 @@ package org.jrprojects;
 
 import org.jrprojects.javacore.excepciones.EdadInvalidaException;
 import org.jrprojects.javacore.excepciones.EjerciciosExcepciones;
+import org.jrprojects.javacore.excepciones.NumeroNegativoException;
 import org.jrprojects.javacore.hilos.EjerciciosHilos;
 import org.jrprojects.javacore.lambdas.EjerciciosLambdas;
 
@@ -153,6 +154,11 @@ public class Main {
         } catch (EdadInvalidaException e) {
             System.out.println("Error: " + e.getMessage());
         }*/
+        try {
+            System.out.println(excepciones.calcularRaizCuadrada(-4));
+        } catch (NumeroNegativoException e) {
+            System.out.println("Error: " + e);
+        }
     }
 
     public static void ejecutaEjerciciosHilos() {
@@ -172,6 +178,6 @@ public class Main {
     public static void ejecutaEjerciciosLambda(){
         EjerciciosLambdas ejerciciosLambdas = new EjerciciosLambdas();
         //ejerciciosLambdas.ejecutaOperaciones(3,2);
-        System.out.println(ejerciciosLambdas.esPar(11));
+        //System.out.println(ejerciciosLambdas.esPar(11));
     }
 }
