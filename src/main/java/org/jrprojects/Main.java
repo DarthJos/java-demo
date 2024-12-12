@@ -1,5 +1,10 @@
 package org.jrprojects;
 
+import org.jrprojects.javacore.biblioteca.Biblioteca;
+import org.jrprojects.javacore.biblioteca.Libro;
+import org.jrprojects.javacore.biblioteca.Usuario;
+import org.jrprojects.javacore.biblioteca.excepciones.LibroNoDisponibleException;
+import org.jrprojects.javacore.biblioteca.excepciones.UsuarioNoEncontradoException;
 import org.jrprojects.javacore.excepciones.EdadInvalidaException;
 import org.jrprojects.javacore.excepciones.EjerciciosExcepciones;
 import org.jrprojects.javacore.excepciones.NumeroNegativoException;
@@ -17,6 +22,7 @@ public class Main {
         ejecutaEjerciciosExcepciones();
         ejecutaEjerciciosHilos();
         ejecutaEjerciciosLambda();
+        ejecutaEjercicioBiblioteca();
     }
 
     public static void ejecutaEjerciciosBasicos() {
@@ -154,11 +160,11 @@ public class Main {
         } catch (EdadInvalidaException e) {
             System.out.println("Error: " + e.getMessage());
         }*/
-        try {
+        /*try {
             System.out.println(excepciones.calcularRaizCuadrada(-4));
         } catch (NumeroNegativoException e) {
             System.out.println("Error: " + e);
-        }
+        }*/
     }
 
     public static void ejecutaEjerciciosHilos() {
@@ -179,5 +185,31 @@ public class Main {
         EjerciciosLambdas ejerciciosLambdas = new EjerciciosLambdas();
         //ejerciciosLambdas.ejecutaOperaciones(3,2);
         //System.out.println(ejerciciosLambdas.esPar(11));
+    }
+
+    public static void ejecutaEjercicioBiblioteca() {
+        Biblioteca biblioteca = new Biblioteca();
+
+        // Agregar libros
+        biblioteca.agregarLibro(new Libro(1, "1984", "George Orwell", true));
+        biblioteca.agregarLibro(new Libro(2, "El principito", "Antoine de Saint-Exupéry", true));
+
+        // Registrar usuarios
+        biblioteca.registrarUsuario(new Usuario("Alice"));
+        biblioteca.registrarUsuario(new Usuario("Bob"));
+
+        int userId = 1;
+        try {
+            // Prestar libros
+            biblioteca.prestarLibro(userId, "El principito");
+            // Reporte de libros prestados
+            System.out.println(biblioteca.getUsuariosRegistrados().get(userId).getNombre());
+            biblioteca.librosPrestadosPorUsuario(userId).forEach(System.out::println);
+        } catch (UsuarioNoEncontradoException e) {
+            System.out.println(e.getMessage());
+        } catch (LibroNoDisponibleException e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 }
