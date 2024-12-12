@@ -50,4 +50,26 @@ public class EjerciciosHilos {
         hilo2.start();
         hilo3.start();
     }
+
+    /**
+     * Crear dos hilos:
+     *  - Uno imprimirá los números pares del 1 al 10,
+     *  - El otro los números impares del 1 al 10.
+     * Ejecución concurrente: Ambos hilos deben ejecutarse de forma simultánea, es decir, intercalando sus impresiones.
+     */
+    public void ejercicioParesImpares() {
+        HiloImpares hiloImpares = new HiloImpares();
+        HiloPares hiloPares = new HiloPares();
+
+        hiloImpares.start();
+        hiloPares.start();
+    }
+
+    /**
+     * Ejercicio 4: Pool de Hilos
+     *
+     * Utiliza ExecutorService con un pool fijo de 3 hilos.
+     * Crea 10 tareas que impriman el nombre del hilo que las está ejecutando y el índice de la tarea
+     * (por ejemplo, "Hilo pool-1-thread-1 ejecutando tarea 3").
+     */
 }

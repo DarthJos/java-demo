@@ -3,6 +3,7 @@ package org.jrprojects;
 import org.jrprojects.javacore.excepciones.EdadInvalidaException;
 import org.jrprojects.javacore.excepciones.EjerciciosExcepciones;
 import org.jrprojects.javacore.hilos.EjerciciosHilos;
+import org.jrprojects.javacore.lambdas.EjerciciosLambdas;
 
 public class Main {
 
@@ -14,6 +15,7 @@ public class Main {
         ejecutaEjerciciosColecciones();
         ejecutaEjerciciosExcepciones();
         ejecutaEjerciciosHilos();
+        ejecutaEjerciciosLambda();
     }
 
     public static void ejecutaEjerciciosBasicos() {
@@ -162,6 +164,14 @@ public class Main {
         }
 
         ejerciciosHilos.ejercicio2();*/
-        ejerciciosHilos.ejercicio3();
+        //ejerciciosHilos.ejercicio3();
+
+        //ejerciciosHilos.ejercicioParesImpares();
+    }
+
+    public static void ejecutaEjerciciosLambda(){
+        EjerciciosLambdas ejerciciosLambdas = new EjerciciosLambdas();
+        //ejerciciosLambdas.ejecutaOperaciones(3,2);
+        System.out.println(ejerciciosLambdas.esPar(11));
     }
 }
