@@ -30,4 +30,24 @@ public class EjerciciosHilos {
         MyRunnable hilo = new MyRunnable();
         hilo.run();
     }
+
+    /**
+     * Ejercicio 3: Prioridad de hilos
+     *
+     * Escribe un programa con tres hilos.
+     * Establece diferentes prioridades a los hilos y observa el orden en el que se ejecutan.
+     */
+    public void ejercicio3() {
+        MyThread hilo1 = new MyThread(1);
+        MyThread hilo2 = new MyThread(2);
+        MyThread hilo3 = new MyThread(3);
+
+        hilo1.setPriority(1);
+        hilo2.setPriority(10);
+        hilo3.setPriority(5);
+
+        hilo1.start();
+        hilo2.start();
+        hilo3.start();
+    }
 }

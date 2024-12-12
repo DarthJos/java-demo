@@ -155,12 +155,13 @@ public class Main {
 
     public static void ejecutaEjerciciosHilos() {
         EjerciciosHilos ejerciciosHilos = new EjerciciosHilos();
-        try {
+        /*try {
             ejerciciosHilos.ejercicio1();
         } catch (InterruptedException e) {
             System.out.println("InterruptedException D:");
         }
 
-        ejerciciosHilos.ejercicio2();
+        ejerciciosHilos.ejercicio2();*/
+        ejerciciosHilos.ejercicio3();
     }
 }
