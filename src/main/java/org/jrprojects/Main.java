@@ -11,7 +11,9 @@ import org.jrprojects.javacore.excepciones.NumeroNegativoException;
 import org.jrprojects.javacore.hilos.EjerciciosHilos;
 import org.jrprojects.javacore.lambdas.EjerciciosLambdas;
 import org.jrprojects.refuerzo.sintaxisbasica.EjerciciosBasicos;
+import org.jrprojects.refuerzo.tiposdatos.EjerciciosTipos;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -30,7 +32,8 @@ public class Main {
         ejecutaEjercicioBiblioteca();*/
 
         //Ejercicios de la 2a Práctica
-        ejecutaEjerciciosBasicos2();
+        //ejecutaEjerciciosBasicos2();
+        ejecutaEjerciciosTipos();
     }
 
     public static void ejecutaEjerciciosBasicos() {
@@ -230,5 +233,16 @@ public class Main {
         System.out.println("Ingresa un número para imprimir su tabla: ");
         int tabla = scanner.nextInt();
         ejerciciosBasicos.imprimeTabla(tabla);
+    }
+
+    public static void ejecutaEjerciciosTipos() {
+        EjerciciosTipos ejerciciosTipos = new EjerciciosTipos();
+        ejerciciosTipos.ejercicio6();
+        int[] enteros = {1,2,3,4,5};
+        System.out.println(ejerciciosTipos.getPromedioArrayEnteros(enteros));
+        int[] enterosInvertidos = ejerciciosTipos.invierteArrayEnteros(enteros);
+        Arrays.stream(enterosInvertidos).forEach(System.out::println);
+        ejerciciosTipos.ejercicio9("Hola mundo java");
+        System.out.println(ejerciciosTipos.esPalindromo("Anita lava la tina"));
     }
 }
