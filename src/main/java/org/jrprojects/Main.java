@@ -14,6 +14,9 @@ import org.jrprojects.refuerzo.poo.dispositivos.Conectable;
 import org.jrprojects.refuerzo.poo.dispositivos.Lampara;
 import org.jrprojects.refuerzo.poo.dispositivos.Radio;
 import org.jrprojects.refuerzo.poo.dispositivos.Televisor;
+import org.jrprojects.refuerzo.poo.gestionacademica.Curso;
+import org.jrprojects.refuerzo.poo.gestionacademica.Estudiante;
+import org.jrprojects.refuerzo.poo.gestionacademica.Profesor;
 import org.jrprojects.refuerzo.poo.sistemaempleados.Empleado;
 import org.jrprojects.refuerzo.poo.sistemaempleados.Gerente;
 import org.jrprojects.refuerzo.poo.sistemaempleados.Vendedor;
@@ -283,5 +286,14 @@ public class Main {
             dispositivo.encender();
             dispositivo.apagar();
         }
+
+        Profesor profesor = new Profesor(34, "Josimar Reyes Campos");
+        List<Estudiante> estudiantes = new ArrayList<>();
+        estudiantes.add(new Estudiante(17, "Romina Reyes"));
+        estudiantes.add(new Estudiante(17, "Renata Limón"));
+        estudiantes.add(new Estudiante(17, "Karen Vazquez"));
+        estudiantes.add(new Estudiante(16, "Valeria Córdova"));
+        Curso tecnologia = new Curso("Tecnología V", profesor, estudiantes);
+        tecnologia.mostrarCurso();
     }
 }
