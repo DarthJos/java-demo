@@ -13,6 +13,10 @@ import org.jrprojects.javacore.lambdas.EjerciciosLambdas;
 import org.jrprojects.refuerzo.poo.sistemaempleados.Empleado;
 import org.jrprojects.refuerzo.poo.sistemaempleados.Gerente;
 import org.jrprojects.refuerzo.poo.sistemaempleados.Vendedor;
+import org.jrprojects.refuerzo.poo.sistemavehiculos.Bote;
+import org.jrprojects.refuerzo.poo.sistemavehiculos.Coche;
+import org.jrprojects.refuerzo.poo.sistemavehiculos.Motocicleta;
+import org.jrprojects.refuerzo.poo.sistemavehiculos.Vehiculo;
 import org.jrprojects.refuerzo.sintaxisbasica.EjerciciosBasicos;
 import org.jrprojects.refuerzo.tiposdatos.EjerciciosTipos;
 
@@ -260,5 +264,11 @@ public class Main {
         empleados.add(new Empleado("Chapis", 30000));
         for (Empleado empleado : empleados)
             empleado.calcularSalario();
+
+        List<Vehiculo> vehiculos = new ArrayList<>();
+        vehiculos.add(new Bote("Botal", "Super-B"));
+        vehiculos.add(new Coche("Seat", "Toledo FR Line"));
+        vehiculos.add(new Motocicleta("Harley", "Mamalona 3000"));
+        for (Vehiculo vehiculo : vehiculos) vehiculo.mover();
     }
 }
