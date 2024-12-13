@@ -10,6 +10,10 @@ import org.jrprojects.javacore.excepciones.EjerciciosExcepciones;
 import org.jrprojects.javacore.excepciones.NumeroNegativoException;
 import org.jrprojects.javacore.hilos.EjerciciosHilos;
 import org.jrprojects.javacore.lambdas.EjerciciosLambdas;
+import org.jrprojects.refuerzo.poo.dispositivos.Conectable;
+import org.jrprojects.refuerzo.poo.dispositivos.Lampara;
+import org.jrprojects.refuerzo.poo.dispositivos.Radio;
+import org.jrprojects.refuerzo.poo.dispositivos.Televisor;
 import org.jrprojects.refuerzo.poo.sistemaempleados.Empleado;
 import org.jrprojects.refuerzo.poo.sistemaempleados.Gerente;
 import org.jrprojects.refuerzo.poo.sistemaempleados.Vendedor;
@@ -270,5 +274,14 @@ public class Main {
         vehiculos.add(new Coche("Seat", "Toledo FR Line"));
         vehiculos.add(new Motocicleta("Harley", "Mamalona 3000"));
         for (Vehiculo vehiculo : vehiculos) vehiculo.mover();
+
+        List<Conectable> dispositivos = new ArrayList<>();
+        dispositivos.add(new Televisor());
+        dispositivos.add(new Radio());
+        dispositivos.add(new Lampara());
+        for(Conectable dispositivo : dispositivos) {
+            dispositivo.encender();
+            dispositivo.apagar();
+        }
     }
 }
