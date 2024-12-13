@@ -10,19 +10,27 @@ import org.jrprojects.javacore.excepciones.EjerciciosExcepciones;
 import org.jrprojects.javacore.excepciones.NumeroNegativoException;
 import org.jrprojects.javacore.hilos.EjerciciosHilos;
 import org.jrprojects.javacore.lambdas.EjerciciosLambdas;
+import org.jrprojects.refuerzo.sintaxisbasica.EjerciciosBasicos;
+
+import java.util.Scanner;
 
 public class Main {
+    public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         //System.out.println("Hello world!");
 
-        ejecutaEjerciciosBasicos();
+        //Ejercicios de la 1a Práctica
+        /*ejecutaEjerciciosBasicos();
         ejecutaEjerciciosPOO();
         ejecutaEjerciciosColecciones();
         ejecutaEjerciciosExcepciones();
         ejecutaEjerciciosHilos();
         ejecutaEjerciciosLambda();
-        ejecutaEjercicioBiblioteca();
+        ejecutaEjercicioBiblioteca();*/
+
+        //Ejercicios de la 2a Práctica
+        ejecutaEjerciciosBasicos2();
     }
 
     public static void ejecutaEjerciciosBasicos() {
@@ -211,5 +219,16 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
+    }
+
+    public static void ejecutaEjerciciosBasicos2() {
+        EjerciciosBasicos ejerciciosBasicos = new EjerciciosBasicos();
+        ejerciciosBasicos.ejercicio1();
+        ejerciciosBasicos.ejercicio2(4,6);
+        ejerciciosBasicos.ejercicio3();
+        System.out.println(ejerciciosBasicos.getFactorial(5));
+        System.out.println("Ingresa un número para imprimir su tabla: ");
+        int tabla = scanner.nextInt();
+        ejerciciosBasicos.imprimeTabla(tabla);
     }
 }
