@@ -10,10 +10,15 @@ import org.jrprojects.javacore.excepciones.EjerciciosExcepciones;
 import org.jrprojects.javacore.excepciones.NumeroNegativoException;
 import org.jrprojects.javacore.hilos.EjerciciosHilos;
 import org.jrprojects.javacore.lambdas.EjerciciosLambdas;
+import org.jrprojects.refuerzo.poo.sistemaempleados.Empleado;
+import org.jrprojects.refuerzo.poo.sistemaempleados.Gerente;
+import org.jrprojects.refuerzo.poo.sistemaempleados.Vendedor;
 import org.jrprojects.refuerzo.sintaxisbasica.EjerciciosBasicos;
 import org.jrprojects.refuerzo.tiposdatos.EjerciciosTipos;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -33,7 +38,8 @@ public class Main {
 
         //Ejercicios de la 2a Práctica
         //ejecutaEjerciciosBasicos2();
-        ejecutaEjerciciosTipos();
+        //ejecutaEjerciciosTipos();
+        ejecutaEjerciciosPOO2();
     }
 
     public static void ejecutaEjerciciosBasicos() {
@@ -244,5 +250,15 @@ public class Main {
         Arrays.stream(enterosInvertidos).forEach(System.out::println);
         ejerciciosTipos.ejercicio9("Hola mundo java");
         System.out.println(ejerciciosTipos.esPalindromo("Anita lava la tina"));
+    }
+
+
+    private static void ejecutaEjerciciosPOO2() {
+        List<Empleado> empleados = new ArrayList<>();
+        empleados.add(new Gerente("Josimar", 80000));
+        empleados.add(new Vendedor("Yvi", 50000));
+        empleados.add(new Empleado("Chapis", 30000));
+        for (Empleado empleado : empleados)
+            empleado.calcularSalario();
     }
 }
