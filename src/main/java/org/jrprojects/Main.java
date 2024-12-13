@@ -10,6 +10,7 @@ import org.jrprojects.javacore.excepciones.EjerciciosExcepciones;
 import org.jrprojects.javacore.excepciones.NumeroNegativoException;
 import org.jrprojects.javacore.hilos.EjerciciosHilos;
 import org.jrprojects.javacore.lambdas.EjerciciosLambdas;
+import org.jrprojects.refuerzo.colecciones.EjerciciosListas;
 import org.jrprojects.refuerzo.poo.dispositivos.Conectable;
 import org.jrprojects.refuerzo.poo.dispositivos.Lampara;
 import org.jrprojects.refuerzo.poo.dispositivos.Radio;
@@ -50,7 +51,8 @@ public class Main {
         //Ejercicios de la 2a Práctica
         //ejecutaEjerciciosBasicos2();
         //ejecutaEjerciciosTipos();
-        ejecutaEjerciciosPOO2();
+        //ejecutaEjerciciosPOO2();
+        ejecutaEjerciciosColecciones2();
     }
 
     public static void ejecutaEjerciciosBasicos() {
@@ -149,9 +151,9 @@ public class Main {
     }
 
     public static void ejecutaEjerciciosColecciones() {
-        /*Listas ejerciciosListas = new Listas();
-        ejerciciosListas.ejercicio1();
-        ejerciciosListas.ejercicio2();*/
+        /*Listas EjerciciosListas = new Listas();
+        EjerciciosListas.ejercicio1();
+        EjerciciosListas.ejercicio2();*/
 
         /*Sets ejerciciosSets = new Sets();
         ejerciciosSets.ejercicio3();
@@ -263,7 +265,6 @@ public class Main {
         System.out.println(ejerciciosTipos.esPalindromo("Anita lava la tina"));
     }
 
-
     private static void ejecutaEjerciciosPOO2() {
         List<Empleado> empleados = new ArrayList<>();
         empleados.add(new Gerente("Josimar", 80000));
@@ -295,5 +296,11 @@ public class Main {
         estudiantes.add(new Estudiante(16, "Valeria Córdova"));
         Curso tecnologia = new Curso("Tecnología V", profesor, estudiantes);
         tecnologia.mostrarCurso();
+    }
+
+    public static void ejecutaEjerciciosColecciones2() {
+        EjerciciosListas ejerciciosListas = new EjerciciosListas();
+        ejerciciosListas.ejercicio1();
+        ejerciciosListas.ejercicio2();
     }
 }
