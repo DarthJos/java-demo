@@ -11,6 +11,7 @@ import org.jrprojects.javacore.excepciones.NumeroNegativoException;
 import org.jrprojects.javacore.hilos.EjerciciosHilos;
 import org.jrprojects.javacore.lambdas.EjerciciosLambdas;
 import org.jrprojects.refuerzo.colecciones.EjerciciosListas;
+import org.jrprojects.refuerzo.colecciones.EjerciciosMaps;
 import org.jrprojects.refuerzo.colecciones.EjerciciosSets;
 import org.jrprojects.refuerzo.poo.dispositivos.Conectable;
 import org.jrprojects.refuerzo.poo.dispositivos.Lampara;
@@ -53,7 +54,7 @@ public class Main {
         //ejecutaEjerciciosBasicos2();
         //ejecutaEjerciciosTipos();
         //ejecutaEjerciciosPOO2();
-        ejecutaEjerciciosColecciones2();
+        //ejecutaEjerciciosColecciones2();
     }
 
     public static void ejecutaEjerciciosBasicos() {
@@ -300,11 +301,16 @@ public class Main {
     }
 
     public static void ejecutaEjerciciosColecciones2() {
-        EjerciciosListas ejerciciosListas = new EjerciciosListas();
+        /*EjerciciosListas ejerciciosListas = new EjerciciosListas();
         ejerciciosListas.ejercicio1();
         ejerciciosListas.ejercicio2();
 
         EjerciciosSets ejerciciosSets = new EjerciciosSets();
         ejerciciosSets.ejercicioComparador();
+
+        EjerciciosMaps ejerciciosMaps = new EjerciciosMaps();
+        ejerciciosSets.ejercicioDiccionario();
+        ejerciciosSets.ejercicioEstudiantes();
+        ejerciciosSets.ejercicioHistorialNavegacion();*/
     }
 }
