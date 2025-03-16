@@ -5,14 +5,9 @@ import org.jrprojects.javacore.biblioteca.Libro;
 import org.jrprojects.javacore.biblioteca.Usuario;
 import org.jrprojects.javacore.biblioteca.excepciones.LibroNoDisponibleException;
 import org.jrprojects.javacore.biblioteca.excepciones.UsuarioNoEncontradoException;
-import org.jrprojects.javacore.excepciones.EdadInvalidaException;
 import org.jrprojects.javacore.excepciones.EjerciciosExcepciones;
-import org.jrprojects.javacore.excepciones.NumeroNegativoException;
 import org.jrprojects.javacore.hilos.EjerciciosHilos;
 import org.jrprojects.javacore.lambdas.EjerciciosLambdas;
-import org.jrprojects.refuerzo.colecciones.EjerciciosListas;
-import org.jrprojects.refuerzo.colecciones.EjerciciosMaps;
-import org.jrprojects.refuerzo.colecciones.EjerciciosSets;
 import org.jrprojects.refuerzo.poo.dispositivos.Conectable;
 import org.jrprojects.refuerzo.poo.dispositivos.Lampara;
 import org.jrprojects.refuerzo.poo.dispositivos.Radio;
@@ -29,6 +24,7 @@ import org.jrprojects.refuerzo.poo.sistemavehiculos.Motocicleta;
 import org.jrprojects.refuerzo.poo.sistemavehiculos.Vehiculo;
 import org.jrprojects.refuerzo.sintaxisbasica.EjerciciosBasicos;
 import org.jrprojects.refuerzo.tiposdatos.EjerciciosTipos;
+import org.jrprojects.udemy.telusko.project1.QuestionService;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -39,22 +35,9 @@ public class Main {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        //System.out.println("Hello world!");
-
-        //Ejercicios de la 1a Práctica
-        /*ejecutaEjerciciosBasicos();
-        ejecutaEjerciciosPOO();
-        ejecutaEjerciciosColecciones();
-        ejecutaEjerciciosExcepciones();
-        ejecutaEjerciciosHilos();
-        ejecutaEjerciciosLambda();
-        ejecutaEjercicioBiblioteca();*/
-
-        //Ejercicios de la 2a Práctica
-        //ejecutaEjerciciosBasicos2();
-        //ejecutaEjerciciosTipos();
-        //ejecutaEjerciciosPOO2();
-        //ejecutaEjerciciosColecciones2();
+        QuestionService service = new QuestionService();
+        service.playQuiz();
+        service.printScore();
     }
 
     public static void ejecutaEjerciciosBasicos() {
